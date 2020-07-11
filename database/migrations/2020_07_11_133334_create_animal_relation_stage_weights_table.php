@@ -15,20 +15,13 @@ class CreateAnimalRelationStageWeightsTable extends Migration
     {
         Schema::create('animal_relation_stage_weights', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('animal_no')->unsigned();
-            $table->bigInteger('stage_id')->unsigned();
-            $table->bigInteger('weight_id')->unsigned();
-            $table->bigInteger('diet_id')->unsigned();
-            $table->bigInteger('weight_to_gain_id')->unsigned();
-            $table->date('date_gain_weight')->unsigned();
+            $table->unsignedBigInteger('animal_no')->unsigned()->nullable();
+            $table->unsignedBigInteger('stage_id')->unsigned()->nullable();
+            $table->unsignedBigInteger('weight_id')->unsigned()->nullable();
+            $table->unsignedBigInteger('diet_id')->unsigned()->nullable();
+            $table->unsignedBigInteger('weight_to_gain_id')->unsigned()->nullable();
+            $table->date('date_gain_weight');
             $table->timestamps();
-
-            $table->foreign('animal_no')->references('no_animal')->on('animals');
-            $table->foreign('stage_id')->references('id')->on('stages');
-            $table->foreign('weight_id')->references('id')->on('weights');
-            $table->foreign('diet_id')->references('id')->on('diets');
-            $table->foreign('weight_to_gain_id')->references('id')->on('weights');
-
 
         });
     }

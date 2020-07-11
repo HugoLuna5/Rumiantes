@@ -15,14 +15,9 @@ class CreateRawMaterialDietsTable extends Migration
     {
         Schema::create('raw_material_diets', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('raw_material_id')->unsigned();
-            $table->bigInteger('diet_id')->unsigned();
+            $table->unsignedBigInteger('raw_material_id')->unsigned()->nullable();
+            $table->unsignedBigInteger('diet_id')->unsigned()->nullable();
             $table->timestamps();
-
-            $table->foreign('diet_id')->references('id')->on('diets');
-            $table->foreign('raw_material_id')->references('id')->on('raw_materials');
-
-
         });
     }
 

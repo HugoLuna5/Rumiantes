@@ -6,5 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Weight extends Model
 {
-    //
+    protected $table = 'weights';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'weight'
+    ];
 }

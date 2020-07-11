@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b562eaf-2b53-48ce-b7ff-49841347445e" name="Default Changelist" comment="" />
+    <list default="true" id="7b562eaf-2b53-48ce-b7ff-49841347445e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Animal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Animal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Batch.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Batch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Diet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Diet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Livestock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Livestock.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Purpose.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Purpose.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Race.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Race.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/RawMaterial.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/RawMaterial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/RawMaterialDiet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/RawMaterialDiet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Stage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Stage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Weight.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Weight.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_11_124456_create_animals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_11_124456_create_animals_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_11_133111_create_raw_material_diets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_11_133111_create_raw_material_diets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_11_133334_create_animal_relation_stage_weights_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_11_133334_create_animal_relation_stage_weights_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_11_140227_add_relationship.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_11_140227_add_relationship.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +30,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -117,6 +138,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1eXZyYdEOjTQWcAHrwGPcy1boKW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -124,6 +146,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -161,7 +184,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594470154554</updated>
-      <workItem from="1594470165342" duration="4799000" />
+      <workItem from="1594470165342" duration="8250000" />
     </task>
     <servers />
   </component>
