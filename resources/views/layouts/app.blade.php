@@ -32,6 +32,23 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
 
+                    @guest
+
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Animales</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Materias primas</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dietas</a>
+                        </li>
+                    @endguest
+
+
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -56,7 +73,7 @@
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    Salir
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

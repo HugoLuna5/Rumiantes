@@ -100,7 +100,7 @@
                                     <div class="form-group">
                                         <label for="gender" class="col-form-label">Sexo</label>
                                         <select name="gender" id="gender" class="form-control">
-                                            <option value="Mascculino">Masculino</option>
+                                            <option value="Masculino">Masculino</option>
                                             <option value="Femenino">Femenino</option>
                                         </select>
                                     </div>

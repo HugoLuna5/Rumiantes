@@ -21,6 +21,22 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function(){
 
+
+    /**
+     * Routes Animals
+     */
+
+
+    /**
+     * Routes Raw Materials
+     */
+
+    /**
+     * Routes diets
+     */
+
+
+
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
