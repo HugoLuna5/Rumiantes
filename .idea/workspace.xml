@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b562eaf-2b53-48ce-b7ff-49841347445e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/auth/regiser_custom.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Animal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Animal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Batch.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Batch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Diet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Diet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Livestock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Livestock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Purpose.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Purpose.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Race.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Race.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/RawMaterial.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/RawMaterial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/RawMaterialDiet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/RawMaterialDiet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Stage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Stage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Weight.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Weight.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_11_124456_create_animals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_11_124456_create_animals_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_11_133111_create_raw_material_diets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_11_133111_create_raw_material_diets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_11_133334_create_animal_relation_stage_weights_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_11_133334_create_animal_relation_stage_weights_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_11_140227_add_relationship.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_11_140227_add_relationship.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -138,7 +126,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1eXZyYdEOjTQWcAHrwGPcy1boKW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -148,11 +138,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\rumiantes\public\css" />
+      <recent name="D:\laragon\www\rumiantes\public\js\flatpickr" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\rumiantes\public\css\flatpickr" />
+      <recent name="D:\laragon\www\rumiantes\public\css" />
       <recent name="D:\laragon\www\rumiantes\app\Model" />
     </key>
   </component>
@@ -184,7 +180,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594470154554</updated>
-      <workItem from="1594470165342" duration="8250000" />
+      <workItem from="1594470165342" duration="9673000" />
+      <workItem from="1594482944580" duration="3318000" />
     </task>
     <servers />
   </component>
@@ -192,13 +189,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="376" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1594470305128">
+    <state x="376" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1594482946964">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="376" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728/-1440.5.1440.860@0.0.1360.728" timestamp="1594470305128" />
-    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1594471380897">
+    <state x="376" y="187" key="com.intellij.ide.util.TipDialog/0.0.1360.728/-1440.5.1440.860@0.0.1360.728" timestamp="1594482946964" />
+    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1594484391199">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728/-1440.5.1440.860@0.0.1360.728" timestamp="1594471380897" />
+    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728/-1440.5.1440.860@0.0.1360.728" timestamp="1594484391199" />
   </component>
 </project>

@@ -15,6 +15,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" >
+    <link rel="stylesheet" href="{{asset('/css/flatpickr/flatpickr.min.css')}}">
 
 </head>
 <body>
@@ -79,7 +80,15 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" ></script>
 <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" ></script>
-<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+<script src="{{asset('/js/flatpickr/flatpickr.min.js')}}"></script>
+<script src="https://npmcdn.com/flatpickr@4.6.3/dist/l10n/es.js"></script>
 
+<script !src="">
+    $("#birthday").flatpickr({
+        locale: "es"
+
+    });
+
+</script>
 </body>
 </html>
