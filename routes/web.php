@@ -45,6 +45,18 @@ Route::group(['middleware' => ['auth']], function(){
 
         });
 
+        /**
+         * Routes Race
+         */
+        Route::prefix('race')->group(function (){
+
+            Route::get('', 'RaceController@index')->name('raceHome');
+            Route::get('/create', 'RaceController@create')->name('createRace');
+            Route::post('/save', 'RaceController@save')->name('saveRace');
+            Route::post('/delete', 'RaceController@delete')->name('deleteRace');
+
+        });
+
 
         /**
          * Routes Raw Materials

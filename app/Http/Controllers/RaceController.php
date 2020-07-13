@@ -2,31 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\RawMaterial;
+use App\Model\Race;
 use App\Model\Stage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class StagesController extends Controller
+class RaceController extends Controller
 {
 
-    public function index()
-    {
+    public function index(){
+        $races = Race::paginate(25)->setPageName('race');
 
-        $stages = Stage::paginate(25)->setPageName('stages');
-
-        return view('stage.index', compact('stages'));
-
+        return view('race.index', compact('races'));
     }
 
-    public function create()
-    {
-        return view('stage.create');
+    public function create(){
+        return view('race.create');
     }
 
-    public function save(Request $request)
-    {
-
+    public function save(Request $request){
         $error = Validator::make($request->all(), [
             'name' => ['required', 'string', 'max:255'],
         ]);
@@ -41,18 +35,16 @@ class StagesController extends Controller
         }
 
 
-        if (Stage::create($request->all())) {
-            return $this->responseSuccess("Estapa guardada con exito");
+        if (Race::create($request->all())) {
+            return $this->responseSuccess("Raza guardada con exito");
         } else {
-            return $this->responseError("No se pudo guardar la etapa");
+            return $this->responseError("No se pudo guardar la raza");
         }
-
     }
 
-    public function delete(Request $request)
-    {
+    public function delete(Request $request){
         $error = Validator::make($request->all(), [
-            'stage_id' => ['required']
+            'race_id' => ['required']
         ]);
 
         if ($error->fails()) {
@@ -64,19 +56,19 @@ class StagesController extends Controller
             return back()->with($notification);
         }
 
-        $element = Stage::find($request->stage_id);
+        $element = Race::find($request->race_id);
 
         if ($element) {
 
             if ($element->delete()) {
-                return $this->responseSuccess("Etapa eliminada con exito");
+                return $this->responseSuccess("Raza eliminada con exito");
 
             } else {
-                return $this->responseError("La etapa no pudo ser eliminada");
+                return $this->responseError("La raza no pudo ser eliminada");
             }
 
         } else {
-            return $this->responseError("La etapa con este ID no existe");
+            return $this->responseError("La raza con este ID no existe");
         }
     }
 
