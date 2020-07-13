@@ -15,6 +15,9 @@
                             Animales
                         </a>
                         <a href="{{route('homeStages')}}" class="list-group-item list-group-item-action">Etapas</a>
+                        <a href="" class="list-group-item list-group-item-action">Ganaderias</a>
+
+                        <a href="{{route('homeStages')}}" class="list-group-item list-group-item-action">Lotes</a>
                         <a href="{{route('raceHome')}}" class="list-group-item list-group-item-action">Razas</a>
                         <a href="#" class="list-group-item list-group-item-action">Proposito</a>
                     </div>

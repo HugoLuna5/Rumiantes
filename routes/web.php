@@ -59,6 +59,21 @@ Route::group(['middleware' => ['auth']], function(){
 
 
         /**
+         * Routes LiveStocks
+         */
+        Route::prefix('livestocks')->group(function (){
+
+            Route::get('', 'LiveStockController@index')->name('homeLivestocks');
+            Route::get('/create', 'LiveStockController@create')->name('createLivestock');
+            Route::post('/save', 'LiveStockController@save')->name('saveLivestock');
+            Route::post('/delete', 'LiveStockController@delete')->name('deleteLivestock');
+
+
+        });
+
+
+
+        /**
          * Routes Raw Materials
          */
         Route::prefix('raw-materials')->group(function (){
