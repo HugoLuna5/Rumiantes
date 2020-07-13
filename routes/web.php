@@ -71,6 +71,19 @@ Route::group(['middleware' => ['auth']], function(){
 
         });
 
+        /**
+         * Routes Batches
+         */
+        Route::prefix('batches')->group(function (){
+
+            Route::get('', 'BatchController@index')->name('homeBatches');
+            Route::get('/create', 'BatchController@create')->name('createBatches');
+            Route::post('/save', 'BatchController@save')->name('saveBatches');
+            Route::post('/delete', 'BatchController@delete')->name('deleteBatches');
+
+
+        });
+
 
 
         /**
