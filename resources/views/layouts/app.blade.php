@@ -36,15 +36,15 @@
 
                     @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/home')}}">Animales</a>
+                            <a class="nav-link" href="{{route('home')}}">Animales</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/home/raw-materials')}}">Materias primas</a>
+                            <a class="nav-link" href="{{route('homeRawMaterials')}}">Materias primas</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/home/diets')}}">Dietas</a>
+                            <a class="nav-link" href="{{route('homeDiets')}}">Dietas</a>
                         </li>
                     @endguest
 

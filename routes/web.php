@@ -29,6 +29,21 @@ Route::group(['middleware' => ['auth']], function(){
         /**
          * Routes Animals
          */
+        Route::prefix('animals')->group(function (){
+
+        });
+
+        /**
+         * Routes Stages
+         */
+        Route::prefix('stages')->group(function (){
+
+            Route::get('', 'StagesController@index')->name('homeStages');
+            Route::get('/create', 'StagesController@create')->name('createStage');
+            Route::post('/save', 'StagesController@save')->name('saveStage');
+            Route::post('/delete', 'StagesController@delete')->name('deleteStage');
+
+        });
 
 
         /**
@@ -44,10 +59,17 @@ Route::group(['middleware' => ['auth']], function(){
 
         });
 
-
         /**
          * Routes diets
          */
+        Route::prefix('diets')->group(function (){
+
+            Route::get('', 'DietsController@index')->name('homeDiets');
+            Route::get('/create', 'DietsController@create')->name('createDiets');
+
+
+
+        });
 
 
     });
