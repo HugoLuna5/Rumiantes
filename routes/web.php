@@ -22,21 +22,39 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function(){
 
 
-    /**
-     * Routes Animals
-     */
+    Route::prefix('/home')->group(function (){
+        //Home Route
+        Route::get('/', 'HomeController@index')->name('home');
+
+        /**
+         * Routes Animals
+         */
 
 
-    /**
-     * Routes Raw Materials
-     */
+        /**
+         * Routes Raw Materials
+         */
+        Route::prefix('raw-materials')->group(function (){
 
-    /**
-     * Routes diets
-     */
+            Route::get('', 'RawMaterials@index')->name('homeRawMaterials');
+            Route::get('/create', 'RawMaterials@create')->name('createRawMaterials');
+            Route::post('/save', 'RawMaterials@save')->name('saveRawMaterials');
+            Route::post('/delete', 'RawMaterials@delete')->name('deleteRawMaterials');
+
+
+        });
+
+
+        /**
+         * Routes diets
+         */
+
+
+    });
+
 
 
 
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+

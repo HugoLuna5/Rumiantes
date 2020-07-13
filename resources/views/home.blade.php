@@ -17,7 +17,6 @@
                         <a href="#" class="list-group-item list-group-item-action">Etapas</a>
                         <a href="#" class="list-group-item list-group-item-action">Razas</a>
                         <a href="#" class="list-group-item list-group-item-action">Proposito</a>
-                        <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
                     </div>
 
 
