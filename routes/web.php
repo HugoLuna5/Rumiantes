@@ -42,7 +42,6 @@ Route::group(['middleware' => ['auth']], function(){
             Route::get('/create', 'StagesController@create')->name('createStage');
             Route::post('/save', 'StagesController@save')->name('saveStage');
             Route::post('/delete', 'StagesController@delete')->name('deleteStage');
-
         });
 
         /**
@@ -54,7 +53,6 @@ Route::group(['middleware' => ['auth']], function(){
             Route::get('/create', 'RaceController@create')->name('createRace');
             Route::post('/save', 'RaceController@save')->name('saveRace');
             Route::post('/delete', 'RaceController@delete')->name('deleteRace');
-
         });
 
 
@@ -67,8 +65,6 @@ Route::group(['middleware' => ['auth']], function(){
             Route::get('/create', 'LiveStockController@create')->name('createLivestock');
             Route::post('/save', 'LiveStockController@save')->name('saveLivestock');
             Route::post('/delete', 'LiveStockController@delete')->name('deleteLivestock');
-
-
         });
 
         /**
@@ -80,10 +76,22 @@ Route::group(['middleware' => ['auth']], function(){
             Route::get('/create', 'BatchController@create')->name('createBatches');
             Route::post('/save', 'BatchController@save')->name('saveBatches');
             Route::post('/delete', 'BatchController@delete')->name('deleteBatches');
+        });
+
+
+        /**
+         * Routes Purposes
+         */
+        Route::prefix('/purposes')->group(function (){
+
+
+            Route::get('', 'PurposeController@index')->name('purposeHome');
+            Route::get('/create', 'PurposeController@create')->name('createPurpose');
+            Route::post('/save', 'PurposeController@save')->name('savePurpose');
+            Route::post('/delete', 'PurposeController@delete')->name('deletePurpose');
 
 
         });
-
 
 
         /**
@@ -96,8 +104,6 @@ Route::group(['middleware' => ['auth']], function(){
             Route::get('/show/json/{id}', 'RawMaterials@showDataJson')->name('showDataJson');
             Route::post('/save', 'RawMaterials@save')->name('saveRawMaterials');
             Route::post('/delete', 'RawMaterials@delete')->name('deleteRawMaterials');
-
-
         });
 
         /**
@@ -109,8 +115,6 @@ Route::group(['middleware' => ['auth']], function(){
             Route::get('/create', 'DietsController@create')->name('createDiets');
             Route::post('/save', 'DietsController@save')->name('saveDiets');
             Route::get('/show/{id}', 'DietsController@show')->name('showDiet');
-
-
 
         });
 
