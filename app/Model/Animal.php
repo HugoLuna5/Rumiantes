@@ -16,7 +16,7 @@ class Animal extends Model
      * @var array
      */
     protected $fillable = [
-        'no_animal', 'race_id', 'purpose_id', 'livestock_id', 'batche_id', 'animal_relation_stage_weights_id',
+        'no_animal', 'race_id', 'purpose_id', 'livestock_id', 'batche_id',
         'birthday', 'gender', 'name'
     ];
 }

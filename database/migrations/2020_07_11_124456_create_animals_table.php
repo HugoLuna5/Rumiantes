@@ -21,7 +21,6 @@ class CreateAnimalsTable extends Migration
             $table->unsignedBigInteger('purpose_id')->unsigned()->nullable();
             $table->unsignedBigInteger('livestock_id')->unsigned()->nullable();
             $table->unsignedBigInteger('batche_id')->unsigned()->nullable();
-            $table->unsignedBigInteger('animal_relation_stage_weights_id')->unsigned()->nullable();
             $table->date('birthday');
             $table->enum('gender', ['Macho', 'Hembra']);
             $table->string('name');

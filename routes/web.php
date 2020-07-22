@@ -30,6 +30,8 @@ Route::group(['middleware' => ['auth']], function(){
          * Routes Animals
          */
         Route::prefix('animals')->group(function (){
+            Route::get('/create', 'HomeController@create')->name('createAnimal');
+            Route::get('/save', 'HomeController@save')->name('saveAnimal');
 
         });
 
@@ -65,6 +67,19 @@ Route::group(['middleware' => ['auth']], function(){
             Route::get('/create', 'LiveStockController@create')->name('createLivestock');
             Route::post('/save', 'LiveStockController@save')->name('saveLivestock');
             Route::post('/delete', 'LiveStockController@delete')->name('deleteLivestock');
+        });
+
+        /**
+         * Routes Weights
+         */
+        Route::prefix('weights')->group(function (){
+
+
+            Route::get('', 'WeightController@index')->name('homeWeight');
+            Route::get('/create', 'WeightController@create')->name('createWeight');
+            Route::post('/save', 'WeightController@save')->name('saveWeight');
+            Route::post('/delete', 'WeightController@delete')->name('deleteWeight');
+
         });
 
         /**
