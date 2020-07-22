@@ -31,7 +31,10 @@ Route::group(['middleware' => ['auth']], function(){
          */
         Route::prefix('animals')->group(function (){
             Route::get('/create', 'HomeController@create')->name('createAnimal');
-            Route::get('/save', 'HomeController@save')->name('saveAnimal');
+            Route::post('/save', 'HomeController@save')->name('saveAnimal');
+            Route::get('/show/{no_animal}', 'HomeController@show')->name('showAnimal');
+            Route::get('/weight/{no_animal}', 'HomeController@createWeightAnimal')->name('createWeightAnimal');
+            Route::post('/weight', 'HomeController@saveWeightAnimal')->name('saveWeightAnimal');
 
         });
 

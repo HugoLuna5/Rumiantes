@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b562eaf-2b53-48ce-b7ff-49841347445e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/animal/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/animal/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/animal/table.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/weight/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/weight/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/weight/table.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/animal/weight.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/Animal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Animal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_11_124456_create_animals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_11_124456_create_animals_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/AnimalRelationStageWeight.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/AnimalRelationStageWeight.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/animal/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/animal/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/animal/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/table.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +142,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/batch" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -193,7 +190,7 @@
       <workItem from="1594482944580" duration="4763000" />
       <workItem from="1594603239247" duration="13766000" />
       <workItem from="1595384255271" duration="24734000" />
-      <workItem from="1595441305211" duration="1019000" />
+      <workItem from="1595441305211" duration="7422000" />
     </task>
     <servers />
   </component>
@@ -205,19 +202,19 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="450" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1360.728/-1440.5.1440.860@0.0.1360.728" timestamp="1594622838333" />
-    <state x="579" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595442462150">
+    <state x="579" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595442938756">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="410" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1360.728/-1440.5.1440.860@0.0.1360.728" timestamp="1594622826108" />
-    <state x="579" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1595442462150" />
+    <state x="579" y="169" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1595442938756" />
     <state x="364" y="18" width="645" height="691" key="#phpunit.xml" timestamp="1594620953337">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="364" y="18" width="645" height="691" key="#phpunit.xml/0.0.1360.728/-1440.5.1440.860@0.0.1360.728" timestamp="1594620953337" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1595389837865">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1595445564557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/1920.0.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1595389837865" />
+    <state width="498" height="446" key="SwitcherDM/1920.0.1440.860/0.0.1920.1040@0.0.1920.1040" timestamp="1595445564557" />
     <state x="376" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1594603292345">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

@@ -40,8 +40,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="livestock">Ganaderia</label>
-                                <select name="livestock" id="livestock" class="form-control">
+                                <label for="livestock_id">Ganaderia</label>
+                                <select name="livestock_id" id="livestock_id" class="form-control">
 
                                     @foreach($livestocks as $livestock)
                                         <option value="{{$livestock->id}}">{{$livestock->name}}</option>
@@ -50,8 +50,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="batch">Lote</label>
-                                <select name="batch" id="batch" class="form-control">
+                                <label for="batche_id">Lote</label>
+                                <select name="batche_id" id="batche_id" class="form-control">
 
                                     @foreach($batches as $batche)
                                         <option value="{{$batche->id}}">{{$batche->number}}</option>
@@ -59,19 +59,11 @@
                                 </select>
                             </div>
 
-                            <div class="form-group">
-                                <label for="stage">Etapa</label>
-                                <select name="stage" id="stage" class="form-control">
 
-                                    @foreach($stages as $stage)
-                                        <option value="{{$stage->id}}">{{$stage->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
 
                             <div class="form-group">
-                                <label for="race">Raza</label>
-                                <select name="race" id="race" class="form-control">
+                                <label for="race_id">Raza</label>
+                                <select name="race_id" id="race_id" class="form-control">
 
                                     @foreach($races as $race)
                                         <option value="{{$race->id}}">{{$race->name}}</option>
@@ -80,8 +72,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="purpose">Proposito</label>
-                                <select name="purpose" id="purpose" class="form-control">
+                                <label for="purpose_id">Proposito</label>
+                                <select name="purpose_id" id="purpose_id" class="form-control">
 
                                     @foreach($purposes as $purpose)
                                         <option value="{{$purpose->id}}">{{$purpose->purpose}}</option>
@@ -101,8 +93,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="father">Padre</label>
-                                <select name="father" id="father" class="form-control">
+                                <label for="father_id">Padre</label>
+                                <select name="father_id" id="father_id" class="form-control">
                                     <option value="0">No se tiene registro</option>
 
                                     @foreach($animals as $animal)
@@ -113,8 +105,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="mother">Madre</label>
-                                <select name="mother" id="mother" class="form-control">
+                                <label for="mother_id">Madre</label>
+                                <select name="mother_id" id="mother_id" class="form-control">
                                     <option value="0">No se tiene registro</option>
                                     @foreach($animals as $animal)
                                         <option value="{{$animal->id}}">{{$animal->id}} - {{$animal->name}}</option>
