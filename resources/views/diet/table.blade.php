@@ -1,25 +1,25 @@
 <table class="table">
     <thead class="thead-dark">
     <tr>
-        <th scope="col">{{$type}}</th>
-        <th scope="col">PB</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Ración (Kg)</th>
+        <th scope="col">Requerimiento preteico (%)</th>
         <th scope="col">Acción</th>
 
     </tr>
     </thead>
     <tbody>
 
-    @foreach($data as $dat)
+    @foreach($diets as $dat)
 
         <tr>
             <td>{{$dat->name}}</td>
-            <td>{{$dat->percentage_pb}}%</td>
+            <td class="text-center">{{$dat->ration_kg}}</td>
+            <td class="text-center">{{$dat->protein_requirement}}%</td>
             <td>
-                <form action="{{route('deleteRawMaterials')}}" method="POST">
-                    @csrf
-                    <input type="hidden" name="rm_id" value="{{$dat->id}}">
-                    <button type="submit" class="btn btn-outline-danger">Eliminar</button>
-                </form>
+                <a href="{{route('showDiet', [$dat->id])}}" class="btn btn-outline-primary d-block">Ver dieta</a>
+
+
             </td>
         </tr>
 
@@ -32,7 +32,7 @@
 <div class="row">
     <div class="d-flex">
         <div class="mx-auto">
-            {{$data->links()}}
+            {{$diets->links()}}
 
         </div>
     </div>

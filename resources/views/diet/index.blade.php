@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-8 offset-2">
+            <div class="col-md-10 offset-1">
 
                 <div class="card">
                     <div class="card-header">
@@ -21,6 +21,7 @@
                     </div>
                     <div class="card-body">
 
+                        @include('diet.table')
 
                     </div>
                 </div>

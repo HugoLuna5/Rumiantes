@@ -15,6 +15,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" >
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
 
 </head>
 <body>
@@ -93,12 +94,21 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" ></script>
 <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" ></script>
 <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 <script !src="">
     if (window.location.pathname == "/home/diets/create") {
+
+
+        jQuery.ajax({
+            url: "https://cdn.jsdelivr.net/npm/sweetalert2@9",
+            dataType: "script",
+            success: function () {
+            },
+            async: true,
+        });
+
         jQuery.ajax({
             url: "/js/diets/calculate.js",
             dataType: "script",
@@ -106,7 +116,11 @@
             },
             async: true,
         });
-    }
+
+
+
+
+}
 
 
 </script>

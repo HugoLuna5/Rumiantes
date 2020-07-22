@@ -107,7 +107,8 @@ Route::group(['middleware' => ['auth']], function(){
 
             Route::get('', 'DietsController@index')->name('homeDiets');
             Route::get('/create', 'DietsController@create')->name('createDiets');
-            Route::get('/save', 'DietsController@save')->name('saveDiets');
+            Route::post('/save', 'DietsController@save')->name('saveDiets');
+            Route::get('/show/{id}', 'DietsController@show')->name('showDiet');
 
 
 

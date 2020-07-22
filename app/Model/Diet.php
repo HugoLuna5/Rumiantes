@@ -17,4 +17,9 @@ class Diet extends Model
     protected $fillable = [
         'name', 'ration_kg', 'protein_requirement'
     ];
+
+
+    public function rawmaterials(){
+        return $this->hasMany('App\Model\RawMaterialDiet', 'diet_id', 'id');
+    }
 }

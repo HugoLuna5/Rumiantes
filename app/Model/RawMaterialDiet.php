@@ -16,4 +16,12 @@ class RawMaterialDiet extends Model
     protected $fillable = [
         'raw_material_id', 'diet_id'
     ];
+
+
+    public function rawmaterial(){
+
+        return $this->hasOne('App\Model\RawMaterial', 'id', 'raw_material_id');
+
+    }
+
 }

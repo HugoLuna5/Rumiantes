@@ -37,7 +37,13 @@ actionFP.addEventListener('click', (event) => {
     let valueProtein = proteinRequirement.value;
 
     if (!valueProtein || !valueProtein.trim() || valueProtein.length === 0){
-        alert("El requerimiento proteico es requerido.")
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'El requerimiento proteico es requerido.',
+        })
+
     }else {
 
 
@@ -52,7 +58,11 @@ actionFP.addEventListener('click', (event) => {
                     arrayFP.push(response);
                     populateTableFP();
                 }else {
-                    alert("La proteina bruta debe ser mayor a la proteina requerida");
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'La proteina bruta debe ser mayor a la proteina requerida',
+                    })
                 }
 
 
@@ -71,7 +81,11 @@ actionFE.addEventListener('click', (event) => {
     let valueProtein = proteinRequirement.value;
 
     if (!valueProtein || !valueProtein.trim() || valueProtein.length === 0){
-        alert("El requerimiento proteico es requerido.")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'El requerimiento proteico es requerido.',
+        })
     }else {
 
         let iDValue = energeticaSelect.value;
@@ -85,7 +99,11 @@ actionFE.addEventListener('click', (event) => {
                     arrayFE.push(response);
                     populateTableFE();
                 }else{
-                    alert("La proteina bruta debe ser menor a la proteina requerida");
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'La proteina bruta debe ser menor a la proteina requerida',
+                    })
 
                 }
 
@@ -137,11 +155,19 @@ populateTable.addEventListener('click', (event) => {
 
 
     if ( (sizeArrFE !== sizeArrFP) || (sizeArrFE === 0 || sizeArrFP === 0)){
-        alert('Debes tener la misma cantida de materias primas de FP y FE')
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debes tener la misma cantida de materias primas de FP y FE',
+        })
     }else{
         let valueKg = rationKg.value;
         if (!valueKg || !valueKg.trim() || valueKg.length === 0){
-            alert("La ración en KG es requerida.");
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'La ración en KG es requerida.',
+            })
         }else {
             containerTable.empty();
             arrayAllRawPrimary = [];
@@ -151,7 +177,6 @@ populateTable.addEventListener('click', (event) => {
             for (let i = 0; i < arrayFE.length; i++) {
                 arrayAllRawPrimary.push(arrayFE[i]);
             }
-            console.log(arrayAllRawPrimary);
             populateDifference();
             actionCalculate.style.display = "block";
 
@@ -173,15 +198,12 @@ function populateDifference() {
     let proteinRequirementInt = parseFloat(proteinRequirement.value);
     for (let i = 0; i < arrayFE.length; i++) {
         let result = proteinRequirementInt - parseFloat(arrayFE[i].percentage_pb);
-        console.log(result)
         arrayDifference.push(result)
     }
 
 
     for (let i = 0; i < arrayFP.length; i++) {
         let result = parseFloat(arrayFP[i].percentage_pb) - proteinRequirementInt ;
-        console.log(result)
-
         arrayDifference.push(result)
     }
 
@@ -215,8 +237,6 @@ function populatecontributionRate() {
         let result = Math.round((num + Number.EPSILON) * 100) / 100;  //
         arrayContributionRate.push(result);
     }
-    console.log(arrayContributionRate);
-
     sumContributionRate = arrayContributionRate.reduce(function (a, b) {
         return a + b;
     }, 0);
@@ -230,8 +250,6 @@ function populateQuantityKg() {
         let result = Math.round((num + Number.EPSILON) * 100) / 100;  //
         arrayquantityKg.push(result)
     }
-    console.log(arrayquantityKg)
-
     sumQuantityKg = arrayquantityKg.reduce(function (a, b) {
         return a + b;
     }, 0);
@@ -247,7 +265,7 @@ actionCalculate.addEventListener('click', (event) => {
         containerTable.append(tableCell);
     }
 
-    let tableCell = '<tr><td></td><td></td><td class="text-center"></td><td class="text-center">'+sumDifference+'</td><td class="text-center">'+sumPercentageParticipation+'</td><td class="text-center">'+sumContributionRate+'</td><td class="text-center">'+sumQuantityKg+'</td></tr>';
+    let tableCell = '<tr class="table-success"><td></td><td></td><td class="text-center"></td><td class="text-center">'+sumDifference+'</td><td class="text-center">'+sumPercentageParticipation+'</td><td class="text-center">'+sumContributionRate+'</td><td class="text-center">'+sumQuantityKg+'</td></tr>';
 
     containerTable.append(tableCell);
 
@@ -255,7 +273,67 @@ actionCalculate.addEventListener('click', (event) => {
 });
 
 actionSaveDiet.addEventListener('click', (event) => {
+    let nameDiet = name.value;
+    const csrfToken = document.head.querySelector("[name~=csrf-token][content]").content;
 
+    if (!nameDiet || !nameDiet.trim() || nameDiet.length === 0){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debes asignar un nombre a la dieta.',
+        })
+
+    }else{
+        let rawMaterials = '';
+
+        for (let i = 0; i < arrayAllRawPrimary.length; i++) {
+
+            if (i === (arrayAllRawPrimary.length - 1)){
+                rawMaterials += ""+arrayAllRawPrimary[i].id
+
+            }else {
+                rawMaterials += +arrayAllRawPrimary[i].id+","
+
+            }
+        }
+
+        let url = '/home/diets/save';
+        fetch(url, {
+            method: 'post',
+            body: JSON.stringify({
+                "name": name.value,
+                "ration_kg": rationKg.value,
+                "protein_requirement": proteinRequirement.value,
+                "raw_materials": rawMaterials,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+                "X-CSRF-Token": csrfToken
+            }
+        }).then( response => {
+            return response.json()
+        }).then( response => {
+            if (response.status === 'error'){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: response.message,
+                })
+            }else {
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Genial!',
+                    text: response.message,
+                });
+
+                location.href = '/home/diets';
+
+            }
+
+        })
+
+
+    }
 
 
 });
