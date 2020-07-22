@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 class RawMaterials extends Controller
 {
 
+    public $statusResponse = 200;
 
     public function index(){
 
@@ -91,6 +92,25 @@ class RawMaterials extends Controller
 
     }
 
+
+    public function showDataJson($id){
+
+        $verifiRawMaterial = RawMaterial::find($id);
+
+        if ($verifiRawMaterial){
+
+            $verifiRawMaterial['status'] = 'success';
+            $verifiRawMaterial['message'] = 'Datos obtenidos exitosamente';
+
+
+            return response()->json($verifiRawMaterial, $this->statusResponse);
+
+        }else{
+            return response()->json(['status' => 'error', 'message' => 'La materia prima con ese Id no existe'], $this->statusResponse);
+        }
+
+
+    }
 
 
     public function responseSuccess($message){

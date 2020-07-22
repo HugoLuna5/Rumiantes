@@ -14,8 +14,7 @@
                                 <h4 class="card-title">Dietas</h4>
                             </div>
                             <div class="col-md-7 text-right">
-                                <a href="{{route('createDiets')}}" class="btn btn-outline-primary">Agregar
-                                    materia prima</a>
+                                <a href="{{route('createDiets')}}" class="btn btn-outline-primary">Agregar dieta</a>
 
                             </div>
                         </div>

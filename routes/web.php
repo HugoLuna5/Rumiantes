@@ -93,6 +93,7 @@ Route::group(['middleware' => ['auth']], function(){
 
             Route::get('', 'RawMaterials@index')->name('homeRawMaterials');
             Route::get('/create', 'RawMaterials@create')->name('createRawMaterials');
+            Route::get('/show/json/{id}', 'RawMaterials@showDataJson')->name('showDataJson');
             Route::post('/save', 'RawMaterials@save')->name('saveRawMaterials');
             Route::post('/delete', 'RawMaterials@delete')->name('deleteRawMaterials');
 
@@ -106,6 +107,7 @@ Route::group(['middleware' => ['auth']], function(){
 
             Route::get('', 'DietsController@index')->name('homeDiets');
             Route::get('/create', 'DietsController@create')->name('createDiets');
+            Route::get('/save', 'DietsController@save')->name('saveDiets');
 
 
 

@@ -97,6 +97,20 @@
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" ></script>
 <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" ></script>
 <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+<script !src="">
+    if (window.location.pathname == "/home/diets/create") {
+        jQuery.ajax({
+            url: "/js/diets/calculate.js",
+            dataType: "script",
+            success: function () {
+            },
+            async: true,
+        });
+    }
+
+
+</script>
+
 
 </body>
 </html>
