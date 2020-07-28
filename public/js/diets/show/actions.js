@@ -47,13 +47,13 @@ function populateDifference() {
     arrayDifference = [];
 
     let proteinRequirementInt = parseFloat(proteinRequirement);
-    for (let i = 0; i < arrayFE.length; i++) {
+    for (let i = (arrayFE.length-1); i >= 0; i--) {
         let result = proteinRequirementInt - parseFloat(arrayFE[i].percentage_pb);
         arrayDifference.push(result)
     }
 
 
-    for (let i = 0; i < arrayFP.length; i++) {
+    for (let i = (arrayFP.length-1); i >=0; i--) {
         let result = parseFloat(arrayFP[i].percentage_pb) - proteinRequirementInt ;
         arrayDifference.push(result)
     }

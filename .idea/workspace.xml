@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b562eaf-2b53-48ce-b7ff-49841347445e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/animal/weight.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Animal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Animal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/AnimalRelationStageWeight.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/AnimalRelationStageWeight.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/animal/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/diets/calculate.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/diets/calculate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/diets/show/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/diets/show/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/animal/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/animal/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,16 +141,17 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\laragon\www\rumiantes\resources\views\batch" />
-      <recent name="D:\laragon\www\rumiantes\resources\views\livestock" />
-      <recent name="D:\laragon\www\rumiantes\public\css" />
-      <recent name="D:\laragon\www\rumiantes\public\js\flatpickr" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\laragon\www\rumiantes\public\css\flatpickr" />
       <recent name="D:\laragon\www\rumiantes\public\css" />
       <recent name="D:\laragon\www\rumiantes\app\Model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\rumiantes" />
+      <recent name="D:\laragon\www\rumiantes\resources\views\batch" />
+      <recent name="D:\laragon\www\rumiantes\resources\views\livestock" />
+      <recent name="D:\laragon\www\rumiantes\public\css" />
+      <recent name="D:\laragon\www\rumiantes\public\js\flatpickr" />
     </key>
   </component>
   <component name="RunManager">
@@ -190,7 +186,8 @@
       <workItem from="1594482944580" duration="4763000" />
       <workItem from="1594603239247" duration="13766000" />
       <workItem from="1595384255271" duration="24734000" />
-      <workItem from="1595441305211" duration="7422000" />
+      <workItem from="1595441305211" duration="7612000" />
+      <workItem from="1595958077649" duration="1078000" />
     </task>
     <servers />
   </component>

@@ -110,10 +110,10 @@
 
                             @endif
 
-                                @if($pa)
-                                    <h4>Ganancia en kilos: {{ $gk->weight->weight -  $pa->weight->weight}} KG</h4>
+                            @if($pa)
+                                <h4>Ganancia en kilos: {{ $gk->weight->weight -  $pa->weight->weight}} KG</h4>
 
-                                @endif
+                            @endif
 
                             <table class="table">
                                 <thead class="thead-dark">
@@ -127,36 +127,36 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($relation as $rel)
-                                        <tr>
-                                            <td>{{$rel->date_gain_weight}}</td>
-                                            <td>{{$rel->weight->weight}}</td>
-                                            @if($rel->weight_to_gain_id !== null && $rel->weight_to_gain_id !== 0)
-                                                <td>{{$rel->weight_to_gain->weight}}</td>
-                                                @else
-                                                <td>--</td>
+                                @foreach($relation as $rel)
+                                    <tr>
+                                        <td>{{$rel->date_gain_weight}}</td>
+                                        <td>{{$rel->weight->weight}}</td>
+                                        @if($rel->weight_to_gain_id !== null && $rel->weight_to_gain_id !== 0)
+                                            <td>{{$rel->weight_to_gain->weight}}</td>
+                                        @else
+                                            <td>--</td>
 
-                                            @endif
-
-
-                                            @if($rel->diet !== null && $rel->diet !== 0)
-                                                <td>{{$rel->diet->name}}</td>
-                                            @else
-                                                <td>--</td>
-
-                                            @endif
-
-                                            @if($rel->stage !== null && $rel->stage !== 0)
-                                                <td>{{$rel->stage->name}}</td>
-                                            @else
-                                                <td>--</td>
-
-                                            @endif
+                                        @endif
 
 
+                                        @if($rel->diet !== null && $rel->diet !== 0)
+                                            <td>{{$rel->diet->name}}</td>
+                                        @else
+                                            <td>--</td>
 
-                                        </tr>
-                                        @endforeach
+                                        @endif
+
+                                        @if($rel->stage !== null && $rel->stage !== 0)
+                                            <td>{{$rel->stage->name}}</td>
+                                        @else
+                                            <td>--</td>
+
+                                        @endif
+
+
+
+                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
 
